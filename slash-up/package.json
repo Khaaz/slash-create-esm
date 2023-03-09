@@ -1,0 +1,11 @@
+{
+	"type": "commonjs",
+	"license": "MIT",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"private": true,
+	"dependencies": {
+		"slash-up": "^1.2.1"
+	}
+}

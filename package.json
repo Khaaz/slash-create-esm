@@ -1,0 +1,40 @@
+{
+	"name": "@owlebot/discord-interactions",
+	"version": "0.1.0",
+	"description": "Owlebot Discord interactions services (slash commands).",
+	"author": "Khaaz <khaaz.dev@gmail.com>, Xerstom <xerstomdev@outlook.fr>",
+	"link": "https://github.com/owlebot/discord-interactions",
+	"main": "./src/index.js",
+	"type": "module",
+	"license": "MIT",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"private": true,
+	"dependencies": {
+		"@owlebot/logger": "^0.1.0",
+		"body-parser": "^1.19.2",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"slash-create": "^5.11.0"
+	},
+	"devDependencies": {
+		"@owlebot/eslint-config": "^1.0.0",
+		"eslint": "^8.33.0",
+		"slash-up": "^1.2.1"
+	},
+	"scripts": {
+		"lint": "eslint src/**/*.js",
+		"test": "yarn run lint",
+		"start": "node src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/owlebot/discord-interactions.git"
+	},
+	"bugs": {
+		"url": "https://github.com/owlebot/discord-interactions/issues"
+	},
+	"homepage": "https://github.com/owlebot/discord-interactions#readme",
+	"keywords": []
+}

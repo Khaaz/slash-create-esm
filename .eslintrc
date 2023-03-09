@@ -1,0 +1,6 @@
+{
+	"extends": ["@owlebot/eslint-config"],
+	"rules": {
+		"no-magic-numbers": "off"
+	  }
+}
