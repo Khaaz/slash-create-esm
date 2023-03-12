@@ -1,6 +1,7 @@
-// This is the slash-up config file.
-// Make sure to fill in "token" and "applicationId" before using.
-// You can also use environment variables from the ".env" file if any.
+// This initialise the Logger when running the app with slash-up
+const { Logger } = require("@owlebot/logger");
+
+Logger.create("@owlebot/discord-interactions");
 
 module.exports = {
 	// The Token of the Discord bot
