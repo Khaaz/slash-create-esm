@@ -5,7 +5,10 @@
 		"node": ">=18.0.0"
 	},
 	"private": true,
+	"scripts": {
+		"slash": "slash-up"
+	},
 	"dependencies": {
-		"slash-up": "^1.2.1"
+		"slash-up": "^1.3.0"
 	}
 }

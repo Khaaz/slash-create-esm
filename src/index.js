@@ -9,7 +9,7 @@ import { CustomSlashCreator } from "./Client.js";
 
 dotenv.config();
 
-Logger.create("@owlebot/discord-interactions", "debug");
+Logger.create("@owlebot/discord-interactions");
 
 const creator = new CustomSlashCreator( {
 	applicationID: process.env.DISCORD_APP_ID,

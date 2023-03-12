@@ -1,8 +1,10 @@
-import { readdirSync } from "fs";
+import { readdir } from "node:fs/promises";
+
 import { Creator } from "slash-create";
 
-function findFilesWithExtension(path, extensions, names = [] ) {
-	for (const name of readdirSync(path) ) {
+async function findFilesWithExtension(path, extensions, names = [] ) {
+	const dir = await readdir(path);
+	for (const name of dir) {
 		names.push(name);
 	}
 	
@@ -13,8 +15,8 @@ export class CustomSlashCreator extends Creator {
 	// eslint-disable-next-line no-unused-vars
 	async registerCommandsIn(commandPath, customExtensions = [] ) {
 		const commands = [];
-		
-		for (const path of findFilesWithExtension(commandPath) ) {
+		const files = await findFilesWithExtension(commandPath);
+		for (const path of files) {
 			try {
 				commands.push(await import(`./commands/${path}`) );
 			} catch (error) {
